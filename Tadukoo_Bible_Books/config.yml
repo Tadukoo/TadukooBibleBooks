@@ -1,0 +1,14 @@
+##########################################
+#                                        #
+#       Tadukoo Bible Books Config       #
+##########################################
+# How many chapters are made before notifying you.
+# Set to 0 to never be notified.
+BookConfigChapterNotifications: 5
+
+# The settings below are how to check the bookconfig.yml file for the given translation.
+# Create will overwrite books even if they already exist.
+# Correct will overwrite incorrect parts of books and ignore others.
+# Check will simply check if each book exists and create them if they don't.
+# Ignore will do nothing.
+KJVBookCheck: check
