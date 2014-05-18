@@ -31,23 +31,21 @@ Upcoming Commands/Features
 --------------------------
 Add commands to mess with stuff while the server's up.
 
+More translations.
+
 Known Issues
 ------------
 None currently.
-
-Translations
-------------
-Currently the only translation in the plugin is the King James Version (KJV), which is public domain. In the future, Tadukoo will be requesting permission
-for other translations.
 
 Download
 --------
 Currently you are unable to download the plugin jar file. Once this plugin is in Beta, it will be available on BukkitDev.
 
 Currently to download and install this plugin, you must download the classes and plugin.yml file, then import them into eclipse, along with importing the
-Bukkit API (Currently this plugin is built off of [1.7.9-R0.1 Beta Build 1936] (http://dl.bukkit.org/downloads/bukkit/view/02620_1.7.9-R0.1/)
+Bukkit API (Currently this plugin is built off of [1.7.9-R0.1 Beta Build 1936] (http://dl.bukkit.org/downloads/bukkit/view/02620_1.7.9-R0.1/)) and importing
+[TadukooBibleProject] (https://github.com/Tadukoo/TadukooBibleProject).
 
-Do not import the Tadukoo_Bible_Books folder into eclipse. Simply place it in your plugins folder.
+Do not import the Tadukoo_Bible_Books or Tadukoo_Bible folder into eclipse. Simply place them in your plugins folder.
 
 Version System
 --------------
