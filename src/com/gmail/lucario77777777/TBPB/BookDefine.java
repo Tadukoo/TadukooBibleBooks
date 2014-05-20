@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import com.gmail.lucario77777777.TBPB.TBB;
 
 public class BookDefine {
-	public static void run(TBB plugin, String tran, String bookName, String cmd){
+	public static void run(TBB plugin, String tran, String bookName, String cmd, int chap, int ver){
 		/*
 		 * page = current page being worked on
 		 * realPage = page to be added to config
@@ -18,7 +18,17 @@ public class BookDefine {
 		 * c = chapter
 		 * lc = 
 		 */
-		int v = 1, lv = 0, c = 0, lc = 0;
+		int v, lv = 0, c, lc = 0;
+		if(chap != -1){
+			c = chap;
+		}else{
+			c = 0;
+		}
+		if(ver != -1){
+			v = ver;
+		}else{
+			v = 1;
+		}
 		/*
 		 * pageNum = current page #
 		 * bookNum = current book #
@@ -28,13 +38,21 @@ public class BookDefine {
 		 * j = amount of chapters gone through since last message
 		 * jL = amount of chapters to go through before printing a message
 		 */
-		int j = 0, jL = plugin.getConfig().getInt("BookConfigChapterNotifications");
+		int j = 0, jL;
+		if(plugin.getConfig().getString("BookConfigChapterNotifications") != null){
+			jL = plugin.getConfig().getInt("BookConfigChapterNotifications");
+		}else{
+			jL = -1;
+			plugin.getConfig().set("BookConfigChapterNotifications", -1);
+		}
 		/*
 		 * cont = continue
 		 * chpD = chapter done
 		 */
 		boolean cont = true, chpD = false;
 		TBB.TBP.getigBook(tran).set(bookName + "1Start", "1:1");
+		TBB.TBP.getigBook(tran).set(bookName + "1Start.c", 1);
+		TBB.TBP.getigBook(tran).set(bookName + "1Start.v", 1);
 		TBB.TBP.saveigBook(tran);
 		while(cont == true){
 			if(page == "" && nextPage != null){
@@ -68,6 +86,8 @@ public class BookDefine {
 							realPage = page;
 							int sv = lv - 1;
 							TBB.TBP.getigBook(tran).set(bookName + bookNum + "End", lc + ":" + sv);
+							TBB.TBP.getigBook(tran).set(bookName + bookNum + "End.c", lc);
+							TBB.TBP.getigBook(tran).set(bookName + bookNum + "End.v", sv);
 							TBB.TBP.saveigBook(tran);
 						}
 					}else{
@@ -84,7 +104,11 @@ public class BookDefine {
 								}
 								int sbookNum = bookNum + 1;
 								TBB.TBP.getigBook(tran).set(bookName + bookNum + "End", sc + ":" + lv);
+								TBB.TBP.getigBook(tran).set(bookName + bookNum + "End.c", sc);
+								TBB.TBP.getigBook(tran).set(bookName + bookNum + "End.v", lv);
 								TBB.TBP.getigBook(tran).set(bookName + sbookNum + "Start", c + ":" + v);
+								TBB.TBP.getigBook(tran).set(bookName + sbookNum + "Start.c", c);
+								TBB.TBP.getigBook(tran).set(bookName + sbookNum + "Start.v", v);
 								TBB.TBP.saveigBook(tran);
 							}else{
 								page = page + " ";

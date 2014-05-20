@@ -33,6 +33,8 @@ Add commands to mess with stuff while the server's up.
 
 More translations.
 
+Make it so that a page doesn't end with a verse number.
+
 Known Issues
 ------------
 None currently.
