@@ -6,8 +6,10 @@ import java.util.logging.Level;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.lucario77777777.TBP.Enums.EnumBooks;
+import com.gmail.lucario77777777.TBP.Enums.EnumTrans;
 import com.gmail.lucario77777777.TBPB.TBB;
-import com.gmail.lucario77777777.TBPB.TranslationChecker;
+import com.gmail.lucario77777777.TBPB.Checker;
 
 import com.gmail.lucario77777777.TBP.TB;
 
@@ -15,13 +17,22 @@ public class TBB extends JavaPlugin {
 	public static TBB plugin;
 	PluginDescriptionFile pdfFile = this.getDescription();
 	public static TBB instance;
-	static TB TBP;
+	public static TB TBP;
 	public static File TBPF;
+	public static EnumBooks ebook;
+	public static EnumTrans etran;
 	
 	@Override
 	public void onDisable () {
 		saveConfig();
-		TranslationChecker.tranSave();
+		Checker.tranSave(ebook);
+		plugin = null;
+		pdfFile = null;
+		instance = null;
+		TBP = null;
+		TBPF = null;
+		ebook = null;
+		etran = null;
 	}
 	@Override
 	public void onEnable () {
@@ -32,11 +43,15 @@ public class TBB extends JavaPlugin {
 			getLogger().log(Level.WARNING, "Failed to hook into Tadukoo Bible.");
 		}
 		instance = this;
-		TranslationChecker.tranCheck();
+		Checker.tranCheck(TBP, ebook, etran);
 	}
 	
 	private Boolean setupTBP(){
 		TBP = (TB) getServer().getPluginManager().getPlugin("Tadukoo_Bible");
+		ebook = EnumBooks.GENESIS;
+		ebook = ebook.getDefault();
+		etran = EnumTrans.KJV;
+		etran = etran.getDefault();
 		return TBP != null;
 	}
 }
