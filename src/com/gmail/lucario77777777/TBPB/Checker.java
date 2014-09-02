@@ -108,6 +108,7 @@ static TBB plugin = TBB.instance;
 		int i = 0;
 		boolean exists;
 		String book;
+		String bookName;
 		String page = "";
 		int pageNum = 1;
 		int bookNum = 1;
@@ -115,16 +116,28 @@ static TBB plugin = TBB.instance;
 			exists = books[i];
 			if(exists){
 				book = ebook.numtoBook(i + 1, "int", null, null);
+				ebook = ebook.fromString(book);
+				if(ebook.getAlias3() != null){
+					bookName = ebook.getAlias3();
+				}else if(ebook.getAlias2() != null){
+					bookName = ebook.getAlias2();
+				}else if(ebook.getAlias() != null){
+					bookName = ebook.getAlias();
+				}else{
+					bookName = ebook.getBook();
+				}
 				boolean cont = true;
 				int j = 1;
 				int k = 0;
+				page = book + "\n";
+				k++;
 				while(cont){
 					if(TBP.getigBook(book, tran).getString("Book" + j + ".start.c") != null){
-						page = page + book + " Book " + j + ": " + 
+						page = page + bookName + " " + j + ": " + 
 								TBP.getigBook(book, tran).getString("Book" + j + ".start.c") + ":" 
 								+ TBP.getigBook(book, tran).getString("Book" + j + ".start.v") + " - "
 								+ TBP.getigBook(book, tran).getString("Book" + j + ".end.c") + ":" 
-								+ TBP.getigBook(book, tran).getString("Book" + j + ".end.v") + "/n";
+								+ TBP.getigBook(book, tran).getString("Book" + j + ".end.v") + "\n";
 						j++;
 						k++;
 					}else{

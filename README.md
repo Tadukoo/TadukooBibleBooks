@@ -132,7 +132,7 @@ Currently you are unable to download the plugin jar file. Once this plugin is fi
 
 Currently to download and install this plugin, you must download the classes and plugin.yml file, then import them into eclipse, along with importing the
 Bukkit API (Currently this plugin is built off of [1.7.9-R0.2 Beta Build 1938] (http://dl.bukkit.org/downloads/bukkit/view/02630_1.7.9-R0.2/)) and importing
-[TadukooBibleProject] (https://github.com/Tadukoo/TadukooBibleProject) (Currently this plugin uses Tadukoo Bible version Beta 0.2).
+[TadukooBibleProject] (https://github.com/Tadukoo/TadukooBibleProject) (Currently this plugin uses Tadukoo Bible version Beta 0.5).
 
 Do not import the Tadukoo_Bible_Books or Tadukoo_Bible folders into eclipse. Simply place them in your plugins folder.
 

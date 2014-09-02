@@ -28,7 +28,7 @@ public class Define {
 		
 		//tempPage = temporary page, used in preparation for the real page.
 		//page = real page
-		String tempPage = "Chapter 1/n";
+		String tempPage = "Chapter 1\n";
 		String page = "";
 		String nextPage = "";
 		
@@ -91,7 +91,7 @@ public class Define {
 					if(pageNum == 50 && !bibleDone){
 						pageNum = 0;
 						bookNum++;
-						nextPage = "Chapter " + c + " Cont./n" + nextPage;
+						nextPage = "Chapter " + c + " Cont.\n" + nextPage;
 						bookDone = true;
 					}else if(bibleDone){
 						cont = false;
@@ -120,7 +120,7 @@ public class Define {
 					}
 					nc++;
 					verse = TBP.getBook(book, tran).getString("ch" + c + "v" + v);
-					nextPage = "Chapter " + c + "/n" + verse;
+					nextPage = "Chapter " + c + "\n" + verse;
 				}
 				page = tempPage;
 				tempPage = "";
