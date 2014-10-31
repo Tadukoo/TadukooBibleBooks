@@ -1,10 +1,10 @@
-package com.gmail.lucario77777777.TBPB;
+package com.gmail.realtadukoo.TBPB;
 
 import java.util.logging.Level;
 
-import com.gmail.lucario77777777.TBP.TB;
-import com.gmail.lucario77777777.TBP.Enums.EnumBooks;
-import com.gmail.lucario77777777.TBP.Enums.EnumChps;
+import com.gmail.realtadukoo.TBP.TB;
+import com.gmail.realtadukoo.TBP.Enums.EnumBooks;
+import com.gmail.realtadukoo.TBP.Enums.EnumChps;
 
 public class Define {
 	public static void run(TB TBP, TBB plugin, String book, EnumBooks ebook, String tran){
@@ -21,7 +21,7 @@ public class Define {
 		int cL = ebook.getChp();
 		
 		EnumChps echp = EnumChps.GENESIS;
-		echp = echp.fromString(book);
+		echp = echp.fromString(book, 1);
 		
 		//vL = verse limit, this is used for when a chapter is completed.
 		int vL = echp.getNum(1);

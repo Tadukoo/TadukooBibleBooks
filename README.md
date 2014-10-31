@@ -115,11 +115,13 @@ Loop
 
 Current Timing
 --------------
-Currently, it appears that each chapter takes between 3 and 6 seconds to generate, with an average of 4 seconds.
+Currently, it appears that each chapter takes between 1 and 5 seconds to generate, with an average of 3 seconds.
 
 Upcoming Commands/Features
 --------------------------
 Add commands to mess with stuff while the server's up.
+
+Make config changes so that it's shorter.
 
 Known Issues
 ------------

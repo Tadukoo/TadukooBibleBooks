@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.TBPB;
+package com.gmail.realtadukoo.TBPB;
 
 import java.io.File;
 import java.util.logging.Level;
@@ -6,12 +6,12 @@ import java.util.logging.Level;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.gmail.lucario77777777.TBP.Enums.EnumBooks;
-import com.gmail.lucario77777777.TBP.Enums.EnumTrans;
-import com.gmail.lucario77777777.TBPB.TBB;
-import com.gmail.lucario77777777.TBPB.Checker;
+import com.gmail.realtadukoo.TBP.Enums.EnumBooks;
+import com.gmail.realtadukoo.TBP.Enums.EnumTrans;
 
-import com.gmail.lucario77777777.TBP.TB;
+import com.gmail.realtadukoo.TBP.TB;
+import com.gmail.realtadukoo.TBPB.Checker;
+import com.gmail.realtadukoo.TBPB.TBB;
 
 public class TBB extends JavaPlugin {
 	public static TBB plugin;

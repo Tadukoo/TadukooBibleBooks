@@ -1,10 +1,10 @@
-package com.gmail.lucario77777777.TBPB;
+package com.gmail.realtadukoo.TBPB;
 
 import java.util.logging.Level;
 
-import com.gmail.lucario77777777.TBP.TB;
-import com.gmail.lucario77777777.TBP.Enums.EnumBooks;
-import com.gmail.lucario77777777.TBP.Enums.EnumTrans;
+import com.gmail.realtadukoo.TBP.TB;
+import com.gmail.realtadukoo.TBP.Enums.EnumBooks;
+import com.gmail.realtadukoo.TBP.Enums.EnumTrans;
 
 public class Checker {
 static TBB plugin = TBB.instance;
@@ -112,14 +112,17 @@ static TBB plugin = TBB.instance;
 		String page = "";
 		int pageNum = 1;
 		int bookNum = 1;
+		int k = 0;
+		boolean endCont = false;
 		while(i < 66){
+			if(i == 65){
+				endCont = true;
+			}
 			exists = books[i];
 			if(exists){
 				book = ebook.numtoBook(i + 1, "int", null, null);
 				ebook = ebook.fromString(book);
-				if(ebook.getAlias3() != null){
-					bookName = ebook.getAlias3();
-				}else if(ebook.getAlias2() != null){
+				if(ebook.getAlias2() != null){
 					bookName = ebook.getAlias2();
 				}else if(ebook.getAlias() != null){
 					bookName = ebook.getAlias();
@@ -128,8 +131,7 @@ static TBB plugin = TBB.instance;
 				}
 				boolean cont = true;
 				int j = 1;
-				int k = 0;
-				page = book + "\n";
+				page = page + book + "\n";
 				k++;
 				while(cont){
 					if(TBP.getigBook(book, tran).getString("Book" + j + ".start.c") != null){
@@ -143,7 +145,7 @@ static TBB plugin = TBB.instance;
 					}else{
 						cont = false;
 					}
-					if(k == 13 || cont == false){
+					if(k >= 13 || (!cont && endCont)){
 						if(pageNum == 50){
 							bookNum++;
 							pageNum = 1;
