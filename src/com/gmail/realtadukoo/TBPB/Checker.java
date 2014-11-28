@@ -50,7 +50,8 @@ static TBB plugin = TBB.instance;
 				plugin.getLogger().log(Level.INFO, tran + " is not complete.");
 				int i = 0;
 				while(i < 66){
-					books[i] = ebook.fromString(ebook.numtoBook(i + 1, "int", null, null)).isAvailable(tran);
+					// TODO: Add check using EnumAvail in the future.
+					//books[i] = ebook.fromString(ebook.numtoBook(i + 1, "int", null, null)).isAvailable(tran);
 					i++;
 				}
 			}
