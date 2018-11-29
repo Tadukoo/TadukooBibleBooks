@@ -1,4 +1,4 @@
-package com.gmail.realtadukoo.TB.Minecraft;
+package com.gmail.realtadukoo.TB.Minecraft.books;
 
 import java.io.File;
 import java.io.FileInputStream;

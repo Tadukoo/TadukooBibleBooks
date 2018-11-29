@@ -1,10 +1,11 @@
-package com.gmail.realtadukoo.TB.Minecraft;
+package com.gmail.realtadukoo.TB.Minecraft.books;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 import com.gmail.realtadukoo.TB.VerseReading;
 import com.gmail.realtadukoo.TB.Enums.EnumTranslations;
+import com.gmail.realtadukoo.TB.Enums.Bible.BibleReference;
 import com.gmail.realtadukoo.TB.Enums.Bible.EnumBible;
 import com.gmail.realtadukoo.TB.Enums.Bible.EnumBibleChapters;
 
@@ -48,7 +49,7 @@ public class GenerateBook{
 		
 		ArrayList<String> verses = new ArrayList<String>();
 		for(int i = 1; i <= EnumBibleChapters.fromBook(book.getBook()).getNum(chp); i++){
-			verses.add(VerseReading.getVerse(book, chp, i, tran));
+			verses.add(VerseReading.getVerse(new BibleReference(book, chp, i, tran)));
 		}
 		for(int i = 0; i < verses.size(); i++){
 			if(page.length() + verses.get(i).length() + 9 <= 256){
