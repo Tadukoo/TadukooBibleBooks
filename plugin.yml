@@ -1,7 +1,0 @@
-name: Tadukoo_Bible_Books
-main: com.gmail.realtadukoo.TBPB.TBB
-version: 1.0.2
-description: The book creating/checking plugin for use with Tadukoo Bible.
-author: Tadukoo
-depend: [Tadukoo_Bible]
-prefix: TBB
