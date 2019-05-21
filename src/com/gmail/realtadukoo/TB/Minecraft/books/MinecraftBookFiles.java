@@ -37,36 +37,4 @@ public class MinecraftBookFiles{
 				book.getBook().replaceAll(" ", "") + ".properties");
 		prop.store(os, "No Comment");
 	}
-	
-	public static void addToMinecraftBook(EnumBible book, EnumTranslations tran, int chpNum, 
-			int bookEnd, int pageEnd){
-		Properties prop = new Properties();
-		try{
-			prop = loadMinecraftBook(book, tran);
-		}catch(IOException e){
-			
-		}
-		prop.setProperty("Ch" + chpNum, "B" + bookEnd + "P" + pageEnd);
-		try{
-			saveMinecraftBook(prop, book, tran);
-		}catch(IOException e){
-			e.printStackTrace();
-		}
-	}
-	
-	public static void addToMinecraftBook(EnumBible book, EnumTranslations tran, int bookNum, 
-			int pageNum, String page){
-		Properties prop = new Properties();
-		try{
-			prop = loadMinecraftBook(book, tran);
-		}catch(IOException e){
-			
-		}
-		prop.setProperty("Book" + bookNum + "Page" + pageNum, page);
-		try{
-			saveMinecraftBook(prop, book, tran);
-		}catch(IOException e){
-			e.printStackTrace();
-		}
-	}
 }

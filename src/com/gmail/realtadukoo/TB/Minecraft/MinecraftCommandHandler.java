@@ -13,7 +13,8 @@ public class MinecraftCommandHandler extends CommandHandler{
 		if(command.startsWith("/")){
 			String[] parts = command.split(" ");
 			if(parts[1].equalsIgnoreCase("Minecraft")){
-				GenerateBook.generateWholeTranslation(EnumTranslations.fromAbbreviation(parts[2]));
+				// TODO: Make numThreads configurable
+				GenerateBook.generateWholeBible(4, EnumTranslations.fromAbbreviation(parts[2]));
 				return new String[]{};
 			}
 		}
