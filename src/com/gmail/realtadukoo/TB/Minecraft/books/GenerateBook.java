@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.gmail.realtadukoo.TB.VerseReading;
-import com.gmail.realtadukoo.TB.Enums.EnumTranslations;
-import com.gmail.realtadukoo.TB.Enums.Bible.BibleReference;
-import com.gmail.realtadukoo.TB.Enums.Bible.EnumBible;
-import com.gmail.realtadukoo.TB.Enums.Bible.EnumBibleChapters;
+import com.gmail.realtadukoo.TB.Bible.BibleReference;
+import com.gmail.realtadukoo.TB.Bible.EnumBible;
+import com.gmail.realtadukoo.TB.Bible.EnumBibleChapters;
+import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
 
 public class GenerateBook{
 	

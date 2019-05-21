@@ -9,8 +9,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
-import com.gmail.realtadukoo.TB.Enums.EnumTranslations;
-import com.gmail.realtadukoo.TB.Enums.Bible.EnumBible;
+import com.gmail.realtadukoo.TB.Bible.EnumBible;
+import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
 
 public class MinecraftBookFiles{
 	

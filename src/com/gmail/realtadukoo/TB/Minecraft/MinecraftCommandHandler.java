@@ -2,9 +2,9 @@ package com.gmail.realtadukoo.TB.Minecraft;
 
 import java.io.IOException;
 
-import com.gmail.realtadukoo.TB.Enums.EnumTranslations;
+import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
+import com.gmail.realtadukoo.TB.Command.CommandHandler;
 import com.gmail.realtadukoo.TB.Minecraft.books.GenerateBook;
-import com.gmail.realtadukoo.TB.command.CommandHandler;
 
 public class MinecraftCommandHandler extends CommandHandler{
 	
