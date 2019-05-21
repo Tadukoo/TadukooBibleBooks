@@ -73,10 +73,13 @@ public class GenerateBook{
 		ArrayList<ChpWorkInfo> works = new ArrayList<ChpWorkInfo>();
 		for(int j = 1; j <= chps; j++){
 			try{
-				//System.out.println("Trying to Receive Stuff...");
 				ChpWorkInfo info = done.dequeue();
-				//System.out.println("Received " + info.getBook().book() + " Chp " + info.getChp());
 				if(info.getChp() == chpDone + 1){
+					// Add pages to files
+					if(pageNum + info.getPages().size() > 50){
+						bookNum++;
+						pageNum = 1;
+					}
 					for(String page: info.getPages()){
 						bookFile.put("Book" + bookNum + "Page" + pageNum, page);
 						pageNum++;
@@ -85,10 +88,14 @@ public class GenerateBook{
 							pageNum = 1;
 						}
 					}
-					//System.out.println("Added " + info.getBook().book() + " Chp " + info.getChp());
 					chpDone++;
 					while(works.size() > 0 && works.get(0).getChp() == chpDone + 1){
 						info = works.remove(0);
+						// Add pages to files
+						if(pageNum + info.getPages().size() > 50){
+							bookNum++;
+							pageNum = 1;
+						}
 						for(String page: info.getPages()){
 							bookFile.put("Book" + bookNum + "Page" + pageNum, page);
 							pageNum++;
