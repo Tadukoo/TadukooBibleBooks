@@ -1,4 +1,4 @@
-package com.gmail.realtadukoo.TB.Minecraft.books;
+package com.gmail.realtadukoo.TB.Minecraft.Books;
 
 import java.io.IOException;
 import java.util.ArrayList;

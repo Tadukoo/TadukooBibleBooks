@@ -1,4 +1,4 @@
-package com.gmail.realtadukoo.TB.Minecraft.books;
+package com.gmail.realtadukoo.TB.Minecraft.Books;
 
 import java.util.LinkedList;
 import java.util.List;
