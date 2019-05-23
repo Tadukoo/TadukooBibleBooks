@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import com.gmail.realtadukoo.TB.VerseReading;
 import com.gmail.realtadukoo.TB.Bible.BibleReference;
 import com.gmail.realtadukoo.TB.Bible.EnumBible;
 import com.gmail.realtadukoo.TB.Bible.EnumBibleChapters;
 import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
+import com.gmail.realtadukoo.TB.Command.GetVerse;
 
 public class GenerateBook{
 	
@@ -139,7 +139,7 @@ public class GenerateBook{
 		BibleReference ref = new BibleReference(book, chp, 1, tran);
 		for(int i = 1; i <= EnumBibleChapters.fromBook(book.getBook()).getNum(chp); i++){
 			ref.setVerse(i);
-			verses.add(VerseReading.getVerse(ref));
+			verses.add(GetVerse.getVerse(ref));
 		}
 		for(int i = 0; i < verses.size(); i++){
 			if(page.length() + verses.get(i).length() + 9 <= 256){
