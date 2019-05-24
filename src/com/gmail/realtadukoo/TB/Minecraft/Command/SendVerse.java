@@ -5,12 +5,12 @@ import java.util.HashMap;
 
 import com.gmail.realtadukoo.TB.Bible.BibleReference;
 import com.gmail.realtadukoo.TB.Command.GetVerse;
-import com.gmail.realtadukoo.TB.Minecraft.MinecraftMainInterface;
+import com.gmail.realtadukoo.TB.Minecraft.MinecraftInterface;
 
 public class SendVerse extends MinecraftCommand{
 	private String sendingPlayer;
 	
-	public SendVerse(MinecraftMainInterface MCInterface, String sendingPlayer){
+	public SendVerse(MinecraftInterface MCInterface, String sendingPlayer){
 		super("<Ref:bible reference> <Player:player>", MCInterface);
 		this.sendingPlayer = sendingPlayer;
 	}

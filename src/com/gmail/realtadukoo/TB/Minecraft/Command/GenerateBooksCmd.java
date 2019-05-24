@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
-import com.gmail.realtadukoo.TB.Minecraft.MinecraftMainInterface;
+import com.gmail.realtadukoo.TB.Minecraft.MinecraftInterface;
 import com.gmail.realtadukoo.TB.Minecraft.Books.GenerateBook;
 
 public class GenerateBooksCmd extends MinecraftCommand{
 	
-	public GenerateBooksCmd(MinecraftMainInterface MCInterface){
+	public GenerateBooksCmd(MinecraftInterface MCInterface){
 		super("<Tran:translation>", MCInterface);
 	}
 	

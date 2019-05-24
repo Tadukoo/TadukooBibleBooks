@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.gmail.realtadukoo.TB.Command.CommandHandler;
-import com.gmail.realtadukoo.TB.Minecraft.MinecraftMainInterface;
+import com.gmail.realtadukoo.TB.Minecraft.MinecraftInterface;
 
 public class MinecraftCommandHandler extends CommandHandler{
-	private MinecraftMainInterface MCInterface;
+	private MinecraftInterface MCInterface;
 	
-	public MinecraftCommandHandler(MinecraftMainInterface MCInterface){
+	public MinecraftCommandHandler(MinecraftInterface MCInterface){
 		this.MCInterface = MCInterface;
 	}
 	
