@@ -2,8 +2,8 @@ package com.gmail.realtadukoo.TB.Minecraft.Books;
 
 import java.util.ArrayList;
 
-import com.gmail.realtadukoo.TB.Bible.EnumBible;
 import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
+import com.gmail.realtadukoo.TB.Constants.EnumBible;
 
 public class ChpWorkInfo{
 	private EnumBible book;

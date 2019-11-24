@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import com.gmail.realtadukoo.TB.Bible.BibleReference;
-import com.gmail.realtadukoo.TB.Bible.EnumBible;
-import com.gmail.realtadukoo.TB.Bible.EnumBibleChapters;
 import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
 import com.gmail.realtadukoo.TB.Command.GetVerse;
+import com.gmail.realtadukoo.TB.Constants.EnumBible;
 
 public class GenerateBook{
 	
@@ -55,7 +54,7 @@ public class GenerateBook{
 		// Generate an entire book of the Bible
 
 		// Send out work
-		int chps = EnumBibleChapters.fromBook(book.getBook()).getChps().length;
+		int chps = book.getNumChapters();
 		for(int j = 1; j <= chps; j++){
 			//System.out.println("Making Work for " + book.book() + " Chp " + j);
 			ChpWorkInfo work = new ChpWorkInfo(book, j, tran);
@@ -137,7 +136,7 @@ public class GenerateBook{
 		
 		ArrayList<String> verses = new ArrayList<String>();
 		BibleReference ref = new BibleReference(book, chp, 1, tran);
-		for(int i = 1; i <= EnumBibleChapters.fromBook(book.getBook()).getNum(chp); i++){
+		for(int i = 1; i <= book.getNum(chp); i++){
 			ref.setVerse(i);
 			verses.add(GetVerse.getVerse(ref));
 		}
