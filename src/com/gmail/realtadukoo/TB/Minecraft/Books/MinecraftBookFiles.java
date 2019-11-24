@@ -9,12 +9,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
-import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
 import com.gmail.realtadukoo.TB.Constants.EnumBible;
+import com.gmail.realtadukoo.TB.Constants.EnumTranslation;
 
 public class MinecraftBookFiles{
 	
-	public static Properties loadMinecraftBook(EnumBible book, EnumTranslations tran) 
+	public static Properties loadMinecraftBook(EnumBible book, EnumTranslation tran) 
 			throws IOException{
 		Properties prop = new Properties();
 		InputStream is = new FileInputStream("resource/Bible/" + tran.getAbbreviation() + "/Minecraft/" + 
@@ -23,7 +23,7 @@ public class MinecraftBookFiles{
 		return prop;
 	}
 	
-	public static void saveMinecraftBook(Properties prop, EnumBible book, EnumTranslations tran)
+	public static void saveMinecraftBook(Properties prop, EnumBible book, EnumTranslation tran)
 			throws IOException{
 		try{
 			FileOutputStream fos = new FileOutputStream("resource/Bible/" + tran.getAbbreviation() + 

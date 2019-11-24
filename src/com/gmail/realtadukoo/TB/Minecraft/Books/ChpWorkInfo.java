@@ -2,16 +2,16 @@ package com.gmail.realtadukoo.TB.Minecraft.Books;
 
 import java.util.ArrayList;
 
-import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
 import com.gmail.realtadukoo.TB.Constants.EnumBible;
+import com.gmail.realtadukoo.TB.Constants.EnumTranslation;
 
 public class ChpWorkInfo{
 	private EnumBible book;
 	private int chp;
-	private EnumTranslations tran;
+	private EnumTranslation tran;
 	private ArrayList<String> pages;
 	
-	public ChpWorkInfo(EnumBible book, int chp, EnumTranslations tran){
+	public ChpWorkInfo(EnumBible book, int chp, EnumTranslation tran){
 		this.book = book;
 		this.chp = chp;
 		this.tran = tran;
@@ -26,7 +26,7 @@ public class ChpWorkInfo{
 		return chp;
 	}
 	
-	public EnumTranslations getTran(){
+	public EnumTranslation getTran(){
 		return tran;
 	}
 	

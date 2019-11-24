@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import com.gmail.realtadukoo.TB.Bible.BibleReference;
-import com.gmail.realtadukoo.TB.Bible.EnumTranslations;
 import com.gmail.realtadukoo.TB.Command.GetVerse;
 import com.gmail.realtadukoo.TB.Constants.EnumBible;
+import com.gmail.realtadukoo.TB.Constants.EnumTranslation;
 
 public class GenerateBook{
 	
-	public static void generateWholeBible(int numThreads, EnumTranslations tran){
+	public static void generateWholeBible(int numThreads, EnumTranslation tran){
 		Queue<ChpWorkInfo> todo, done;
 		todo = new Queue<ChpWorkInfo>(150);
 		done = new Queue<ChpWorkInfo>(150);
@@ -49,7 +49,7 @@ public class GenerateBook{
 		}
 	}
 	
-	public static void generateWholeBook(EnumBible book, EnumTranslations tran, Queue<ChpWorkInfo> todo, Queue<ChpWorkInfo> done,
+	public static void generateWholeBook(EnumBible book, EnumTranslation tran, Queue<ChpWorkInfo> todo, Queue<ChpWorkInfo> done,
 			int numThreads){
 		// Generate an entire book of the Bible
 
@@ -130,13 +130,13 @@ public class GenerateBook{
 		}
 	}
 	
-	public static ArrayList<String> generateWholeChapter(EnumBible book, int chp, EnumTranslations tran){
+	public static ArrayList<String> generateWholeChapter(EnumBible book, int chp, EnumTranslation tran){
 		ArrayList<String> pages = new ArrayList<String>();
 		String page = "Chapter " + chp + "\n";
 		
 		ArrayList<String> verses = new ArrayList<String>();
 		BibleReference ref = new BibleReference(book, chp, 1, tran);
-		for(int i = 1; i <= book.getNum(chp); i++){
+		for(int i = 1; i <= book.getNumVersesInChp(chp); i++){
 			ref.setVerse(i);
 			verses.add(GetVerse.getVerse(ref));
 		}
