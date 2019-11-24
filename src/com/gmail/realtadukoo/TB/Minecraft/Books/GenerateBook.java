@@ -135,7 +135,12 @@ public class GenerateBook{
 		String page = "Chapter " + chp + "\n";
 		
 		ArrayList<String> verses = new ArrayList<String>();
-		BibleReference ref = new BibleReference(book, chp, 1, tran);
+		BibleReference ref = BibleReference.builder()
+											.book(book)
+											.chapter(chp)
+											.verse(1)
+											.translation(tran)
+											.build();
 		for(int i = 1; i <= book.getNumVersesInChp(chp); i++){
 			ref.setVerse(i);
 			verses.add(GetVerse.getVerse(ref));
