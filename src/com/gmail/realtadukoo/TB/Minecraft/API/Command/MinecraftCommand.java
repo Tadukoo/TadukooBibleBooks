@@ -1,17 +1,17 @@
 package com.gmail.realtadukoo.TB.Minecraft.API.Command;
 
+import com.gmail.realtadukoo.MinecraftAPI.MinecraftManager;
 import com.gmail.realtadukoo.TB.API.Command.Command;
-import com.gmail.realtadukoo.TB.Minecraft.API.MinecraftInterface;
 
 public abstract class MinecraftCommand extends Command{
-	private MinecraftInterface MCInterface;
+	private MinecraftManager MCMan;
 	
-	public MinecraftCommand(String formatString, MinecraftInterface MCInterface){
+	public MinecraftCommand(String formatString, MinecraftManager MCMan){
 		super(formatString);
-		this.MCInterface = MCInterface;
+		this.MCMan = MCMan;
 	}
 	
-	protected MinecraftInterface getMCInterface(){
-		return MCInterface;
+	protected MinecraftManager getMCMan(){
+		return MCMan;
 	}
 }

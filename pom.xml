@@ -12,6 +12,11 @@
 			<artifactId>TadukooBibleAPI</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.gmail.realtadukoo.MinecraftAPI</groupId>
+			<artifactId>TadukooMinecraftAPI</artifactId>
+			<version>0.1-Alpha-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -3,14 +3,14 @@ package com.gmail.realtadukoo.TB.Minecraft.API.Command;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.gmail.realtadukoo.MinecraftAPI.MinecraftManager;
 import com.gmail.realtadukoo.TB.API.Command.CommandHandler;
-import com.gmail.realtadukoo.TB.Minecraft.API.MinecraftInterface;
 
 public class MinecraftCommandHandler extends CommandHandler{
-	private MinecraftInterface MCInterface;
+	private MinecraftManager MCMan;
 	
-	public MinecraftCommandHandler(MinecraftInterface MCInterface){
-		this.MCInterface = MCInterface;
+	public MinecraftCommandHandler(MinecraftManager MCMan){
+		this.MCMan = MCMan;
 	}
 	
 	@Override
@@ -22,10 +22,10 @@ public class MinecraftCommandHandler extends CommandHandler{
 				args.add(parts[i]);
 			}
 			if(parts[1].equalsIgnoreCase("Minecraft")){
-				return new GenerateBooksCmd(MCInterface).runCommand(args);
+				return new GenerateBooksCmd(MCMan).runCommand(args);
 			}else if(parts[1].equalsIgnoreCase("send")){
 				// TODO: Figure out a way to get sender here
-				return new SendVerse(MCInterface, null).runCommand(args);
+				return new SendVerse(MCMan, null).runCommand(args);
 			}
 		}
 		return super.handleCommand(command);
