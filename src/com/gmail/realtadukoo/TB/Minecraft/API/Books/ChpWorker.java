@@ -1,4 +1,4 @@
-package com.gmail.realtadukoo.TB.Minecraft.Books;
+package com.gmail.realtadukoo.TB.Minecraft.API.Books;
 
 public class ChpWorker implements Runnable{	
 	protected Queue<ChpWorkInfo> todo, done;

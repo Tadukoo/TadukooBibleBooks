@@ -1,13 +1,13 @@
-package com.gmail.realtadukoo.TB.Minecraft.Books;
+package com.gmail.realtadukoo.TB.Minecraft.API.Books;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import com.gmail.realtadukoo.TB.Bible.BibleReference;
-import com.gmail.realtadukoo.TB.Command.GetVerse;
-import com.gmail.realtadukoo.TB.Constants.EnumBible;
-import com.gmail.realtadukoo.TB.Constants.EnumTranslation;
+import com.gmail.realtadukoo.TB.API.Bible.BibleReference;
+import com.gmail.realtadukoo.TB.API.Command.GetVerse;
+import com.gmail.realtadukoo.TB.API.Constants.EnumBible;
+import com.gmail.realtadukoo.TB.API.Constants.EnumTranslation;
 
 public class GenerateBook{
 	

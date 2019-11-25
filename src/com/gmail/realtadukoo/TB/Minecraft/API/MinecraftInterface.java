@@ -1,4 +1,4 @@
-package com.gmail.realtadukoo.TB.Minecraft;
+package com.gmail.realtadukoo.TB.Minecraft.API;
 
 public interface MinecraftInterface{
 	

@@ -1,11 +1,11 @@
-package com.gmail.realtadukoo.TB.Minecraft.Command;
+package com.gmail.realtadukoo.TB.Minecraft.API.Command;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.gmail.realtadukoo.TB.Bible.BibleReference;
-import com.gmail.realtadukoo.TB.Command.GetVerse;
-import com.gmail.realtadukoo.TB.Minecraft.MinecraftInterface;
+import com.gmail.realtadukoo.TB.API.Bible.BibleReference;
+import com.gmail.realtadukoo.TB.API.Command.GetVerse;
+import com.gmail.realtadukoo.TB.Minecraft.API.MinecraftInterface;
 
 public class SendVerse extends MinecraftCommand{
 	private String sendingPlayer;

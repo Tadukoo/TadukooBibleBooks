@@ -1,11 +1,11 @@
-package com.gmail.realtadukoo.TB.Minecraft.Command;
+package com.gmail.realtadukoo.TB.Minecraft.API.Command;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.gmail.realtadukoo.TB.Constants.EnumTranslation;
-import com.gmail.realtadukoo.TB.Minecraft.MinecraftInterface;
-import com.gmail.realtadukoo.TB.Minecraft.Books.GenerateBook;
+import com.gmail.realtadukoo.TB.API.Constants.EnumTranslation;
+import com.gmail.realtadukoo.TB.Minecraft.API.MinecraftInterface;
+import com.gmail.realtadukoo.TB.Minecraft.API.Books.GenerateBook;
 
 public class GenerateBooksCmd extends MinecraftCommand{
 	

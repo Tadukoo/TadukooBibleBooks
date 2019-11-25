@@ -1,10 +1,10 @@
-package com.gmail.realtadukoo.TB.Minecraft.Command;
+package com.gmail.realtadukoo.TB.Minecraft.API.Command;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.gmail.realtadukoo.TB.Command.CommandHandler;
-import com.gmail.realtadukoo.TB.Minecraft.MinecraftInterface;
+import com.gmail.realtadukoo.TB.API.Command.CommandHandler;
+import com.gmail.realtadukoo.TB.Minecraft.API.MinecraftInterface;
 
 public class MinecraftCommandHandler extends CommandHandler{
 	private MinecraftInterface MCInterface;

@@ -1,6 +1,6 @@
-package com.gmail.realtadukoo.TB.Minecraft;
+package com.gmail.realtadukoo.TB.Minecraft.API;
 
-import com.gmail.realtadukoo.TB.API;
+import com.gmail.realtadukoo.TB.API.API;
 
 /**
  * Class used for storing Minecraft API related information.

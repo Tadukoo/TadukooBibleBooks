@@ -1,7 +1,7 @@
-package com.gmail.realtadukoo.TB.Minecraft.Command;
+package com.gmail.realtadukoo.TB.Minecraft.API.Command;
 
-import com.gmail.realtadukoo.TB.Command.Command;
-import com.gmail.realtadukoo.TB.Minecraft.MinecraftInterface;
+import com.gmail.realtadukoo.TB.API.Command.Command;
+import com.gmail.realtadukoo.TB.Minecraft.API.MinecraftInterface;
 
 public abstract class MinecraftCommand extends Command{
 	private MinecraftInterface MCInterface;
