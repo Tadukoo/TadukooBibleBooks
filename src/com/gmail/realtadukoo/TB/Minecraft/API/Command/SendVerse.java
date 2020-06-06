@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.gmail.realtadukoo.MinecraftAPI.MinecraftFormatting.Color;
+import com.gmail.realtadukoo.MinecraftAPI.Message;
 import com.gmail.realtadukoo.MinecraftAPI.MinecraftManager;
 import com.gmail.realtadukoo.MinecraftAPI.Entity.Player;
 import com.gmail.realtadukoo.MinecraftAPI.Entity.PlayerManager;
@@ -27,7 +28,11 @@ public class SendVerse extends MinecraftCommand{
 		String playerName = (String) objs.get("Player");
 		String verse = GetVerse.getVerse(ref);
 		Player player = playerMan.getPlayerFromName(playerName);
-		playerMan.sendMessage(player, Color.GREEN, sendingPlayer + " sent you this Bible verse: " + verse);
+		Message message = Message.builder()
+									.color(Color.GREEN)
+									.message(sendingPlayer + " sent you this Bible verse: " + verse)
+									.build();
+		playerMan.sendMessage(player, message);
 		return new String[]{};
 	}
 }
